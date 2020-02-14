@@ -1,0 +1,11 @@
+1. If on running springboot getting port conflict  then 
+1.a) try to delete the .m2 folder inside c:/user/
+1.b) then stop other hibernate application from STS or Eclipse
+1.c) and run if still getting same error -  ----  then goto 2 point
+
+2)https://stackoverflow.com/questions/39632667/how-do-i-kill-the-process-currently-using-a-port-on-localhost-in-windows
+
+2.a) kill the port on which you wan to listenning  like ex.
+2.b)open cmd as administrater and type as ---
+2.c) netstat -ano | findstr :8080 then 
+2.d)taskkill /PID 4156 /F
