@@ -1,0 +1,73 @@
+******************* JSON DATA CRUD REQUEST POSTMAN ************************
+
+1. To Delete cartItem - http://localhost:8080/deletecartitem/14  (14 = cartitemid)
+
+2. ChackOut Post -  http://localhost:8080/cartitems/checkout/9      
+	BODY -  
+		{
+	"transactiontype":"Debit",
+	"date":"2019-07-02",
+	"remarks":"good"
+	}
+
+3. Search Product - http://localhost:8080/search  
+	Body -
+		{
+	"productName":"aka"
+	}
+
+4. Add Buyer -- http://localhost:8080/buyersinfo
+	Body - 
+		{
+    "name": "Janam",
+    "password": "2345",
+    "emailId": "jddj@hs",
+    "mobileNo": "97652dskf46",
+    "date": "2019-10-02T00:00:00.000+0000"
+}
+
+5. Add Seller -- http://localhost:8080/newSeller
+	Body - 
+		{
+        "name": "Voila",
+        "password":"123456",
+        "companyName":"Voila",
+        "gstin":"gs1234",
+        "companyDescription":"some",
+        "postalAddress":{
+        	"houseNumber":123,
+        	"streetName":"sdhkds",
+        	"locality":"hka",
+        	"city":"c",
+        	"state":"s",
+        	"pinCode":123456
+        },
+        "website": "jkfnk.com",
+        "emailId": "asdgkj@c.com",
+        "mobileNo":12874694
+	
+}
+
+6. add Product ---  http://localhost:8182/product/1  (1 = sellerId)
+
+	Body - 
+		{
+	"productName":"Camera J1",
+	"manufacturer":"voila",
+	"model":"K series",
+	"seller":{
+		"id":1
+	},
+	"price":245,
+	"stock":12,
+	"categoryId":{
+		"categoryId":1
+	},
+	"subCategoryId":{
+		"subCategoryId":1
+	},
+	"decription":"jhsjhfs",
+	"remarks":"best handy"
+	
+	}
+
